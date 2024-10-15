@@ -4,4 +4,4 @@ Open Visual Studio Code
 
 Add the Live Server extension
 
-Right the .html file and open with Live Server. 
+Right click the .html file and open with Live Server. 
