@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Header -->
+    <head>
+        <!-- Specifies the character encoding for the HTML document -->
+        <meta charset="UTF-8"/>
+        <!-- Ensures proper rendering and touch zooming on older versions of Internet Explorer -->
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+        <!-- Ensures the page is responsive and adjusts to different screen sizes -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- The title of the webpage that appears on the browser tab -->
+        <title>My Portfolio</title>
+        <!-- Links the external CSS file for styling the webpage -->
+        <link rel="stylesheet" href="style.css"/>
+        <!-- Links the external CSS file specifically for media queries (for responsiveness) -->
+        <link rel="stylesheet" href="mediaqueries.css"/>
+    </head>
+
+    <body>
+        <!-- Desktop Menu -->
+        <nav id="desktop-nav">
+            <!-- Logo section of the navigation bar -->
+            <div class="logo">Welcome!</div>
+            <!-- Navigation links section -->
+            <div>
+                <ul class="nav-links">
+                    <!-- Each list item contains a link to a specific section of the page -->
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Drop Down Menu (Mobile) -->
+        <nav id="hamburger-nav">
+            <!-- Logo section displaying a welcome message -->
+            <div class="logo">Welcome!</div>
+            <!-- Hamburger menu section for mobile view -->
+            <div class="hamburger-menu">
+                <!-- The hamburger icon (three lines) that toggles the menu when clicked -->
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!-- The menu links that appear when the hamburger menu is toggled -->
+                <div class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Profile Section -->
+        <section id="profile">
+            <!-- Container for the profile picture section -->
+            <div class="section__pic-container">
+                <img src="./assets/beach.png" alt="Khoi Nguyen profile picture"/>
+            </div>
+            <!-- Container for the text section -->
+            <div class="section__text">
+                <!-- First paragraph introducing the user -->
+                <p class="section__text__p1">Hello, I'm</p>
+                <!-- Main title displaying the user's name -->
+                <h1 class="title">Khoi Nguyen</h1>
+                 <!-- Subheading displaying the user's role -->
+                <p class="section__text__p2">Amateur Front-End Developer</p>
+                 <!-- Container for the buttons -->
+                <div class="btn-container">
+                    <!-- Button to download the resume in PDF format -->
+                    <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">Download Resume</button>
+                    <!-- Button to navigate to the contact info section -->
+                    <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+                </div>
+                <!-- Container for social media icons -->
+                <div id="socials-container">
+                    <!-- LinkedIn icon linking to the user's LinkedIn profile -->
+                    <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https:/linkedin.com'"/>
+                    <!-- GitHub icon linking to the user's GitHub profile -->
+                    <img src="./assets/github.png" alt="My GitHub profile" class="icon" onclick="location.href='https:/github.com'"/>
+                </div>
+            </div>    
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <p class="section__text__p1">Get To Know More</p>
+            <h1 class="title">About Me</h1>
+            <!-- Container for the entire section -->
+            <div class="section-container">
+                    <!-- Container for the profile picture in the About section -->
+                    <div class="section__pic-container">
+                        <img src="./assets/sky.png" alt="Profile picture" class="about-pic"/>
+                    </div>
+                <!-- Container for the details about the user -->
+                <div class="about-details-container">
+                    <!-- Container for experience and education details -->
+                    <div class="about-containers">
+                        <!-- Experience details section -->
+                        <div class="details-container">
+                            <img src="./assets/experience.png" alt="Experience Icon" class="icon"/>
+                            <h3>Experience</h3>
+                            <p>Full-time Student</p>
+                        </div>
+                        <!-- Education details section -->
+                        <div class="details-container">
+                            <img src="./assets/education.png" alt="Education icon" class="icon"/>
+                            <h3>Education</h3>
+                            <p>Bachelor of C.S Degree</p>
+                        </div>
+                    </div>
+                    <!-- Container for a personal introduction text -->
+                    <div class="text-container">
+                        <p> I'm a full-time Undergrad student
+                            from California State University of Fullerton.
+                            I'm currently pursuing a Bachelor Degree in Computer Science.
+                            My goal is to finish college and enlist in the U.S military.
+                            I have done several projects throughout my college journey.
+                            However, only two of them peaked my interest, 
+                            this project and another one in my Game Design class.
+                            Why? Because of they are fun to do. 
+                            Anyway, Nice to meet you. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Clickable Arrow image that move to next section -->
+            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'"/>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience">
+            <!-- Section Title -->
+            <p class="section__text__p1">This is My</p>
+            <h1 class="title">Experience</h1>
+            <!-- Main Container for Experience Details -->
+            <div class="experience-details-container">
+                <div class="about-containers">
+                    <!-- Front-End Developer Skills Container -->
+                    <div class="details-container">
+                        <h2 class="experience-sub-title">Front-End Developer</h2>
+                        <div class="article-container">
+                            <!-- Individual Experience Items -->
+                            <article>
+                                <img src="./assets/checkmark.png" alt="Experience Icon" class="icon"/>
+                                <!-- Experience information -->
+                                <div>
+                                    <h3>HTML</h3>
+                                    <p>Beginner</p>
+                                </div>
+                            </article>
+                            <!-- Same Format -->
+                            <article>
+                                <img src="./assets/checkmark.png" alt="Experience Icon" class="icon"/>
+                                <div>
+                                    <h3>CSS</h3>
+                                    <p>Beginner</p>
+                                </div>
+                            </article>
+                            <!-- Same Format -->
+                            <article>
+                                <img src="./assets/checkmark.png" alt="Experience Icon" class="icon"/>
+                                <div>
+                                    <h3>JavaScript</h3>
+                                    <p>Beginner</p>
+                                </div>
+                            </article>
+                            <!-- Same Format -->
+                            <article>
+                                <img src="./assets/checkmark.png" alt="Experience Icon" class="icon"/>
+                                <div>
+                                    <h3>Python</h3>
+                                    <p>Beginner</p>
+                                </div>
+                            </article>
+                            <!-- Same Format -->
+                            <article>
+                                <img src="./assets/checkmark.png" alt="Experience Icon" class="icon"/>
+                                <div>
+                                    <h3>C++</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <!-- College Courses Container -->
+                    <div class="details-container">
+                        <!-- Section Title for Completed College Courses -->
+                        <h2 class="experience-sub-title">College Courses Accomplished</h2>
+                        <!-- Container for individual course items -->
+                        <div class="article-container">
+                            <!-- Individual Course Items -->
+                            <article>
+                                <img src="./assets/checkmark.png" alt="Experience Icon" class="icon"/>
+                                <!-- Course information -->
+                                <div>
+                                    <h3>MySQL</h3>
+                                    <p>Beginner</p>
+                                </div>
+                            </article>
+                            <!-- Same Format -->
+                            <article>
+                                <img src="./assets/checkmark.png" alt="Experience Icon" class="icon"/>
+                                <div>
+                                    <h3>Algorithm Study</h3>
+                                    <p>Beginner</p>
+                                </div>
+                            </article>
+                            <!-- Same Format -->
+                            <article>
+                                <img src="./assets/checkmark.png" alt="Experience Icon" class="icon"/>
+                                <div>
+                                    <h3>Games Design</h3>
+                                    <p>Beginner</p>
+                                </div>
+                            </article>
+                            <!-- Same Format -->
+                            <article>
+                                <img src="./assets/checkmark.png" alt="Experience Icon" class="icon"/>
+                                <div>
+                                    <h3>Machine Learning</h3>
+                                    <p>Beginner</p>
+                                </div>
+                            </article>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation Arrow -->
+            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'"/>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <!-- Section Title -->
+            <p class="section__text__p1">Take A Look At My</p>
+            <h1 class="title">Projects</h1>
+            <!-- Main Container for Projects -->
+            <div class="experience-details-container">
+                <!-- Container holding individual project sections -->
+                <div class="about-containers">
+                    <!-- Project 1 -->
+                    <div class="details-container color-container">
+                        <!-- Image container for the project -->
+                        <div class="article-container">
+                            <img src="./assets/jungle.png" alt="Project 1" class="project-img"/>
+                        </div>
+                        <!-- Title of Project 1 -->
+                        <h2 class="experience-sub-title project-title">First Project</h2>
+                        <!-- Container for action buttons -->
+                        <div class="btn-container">
+                            <!-- Button to navigate to the project link (GitHub in this case) -->
+                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">Click Here</button>
+                            <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Demo</button> --> <!-- (Optional) -->
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img src="./assets/mountain.png" alt="Project 2" class="project-img"/>
+                        </div>
+                        <h2 class="experience-sub-title project-title">Second Project</h2>
+                        <div class="btn-container">
+                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">Click Here</button>
+                            <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Demo</button> --> <!-- (Optional) -->
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img src="./assets/desert.png" alt="Project 3" class="project-img"/>
+                        </div>
+                        <h2 class="experience-sub-title project-title">Third Project</h2>
+                        <div class="btn-container">
+                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">Click Here</button>
+                            <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Demo</button> --> <!-- (Optional) -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'"/>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <!-- Section heading -->
+            <p class="section__text__p1">Want To Talk?</p>
+            <!-- Main title of the contact section -->
+            <h1 class="title">Contact Me</h1>
+            <!-- Container for all the contact info boxes -->
+            <div class="contact-info-upper-container">
+                <!-- Individual contact info container: Gmail -->
+                <div class="contact-info-container">
+                    <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon"/>
+                    <p><a href="https://www.google.com/gmail/about/">Gmail.com</a></p>
+                </div>
+                <!-- Individual contact info container: LinkedIn -->
+                <div class="contact-info-container">
+                    <!-- Linkedin icon -->
+                    <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon"/>
+                    <!-- Link to Linkedin -->
+                    <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+                </div>
+                <!-- Individual contact info container: Facebook -->
+                <div class="contact-info-container">
+                    <!-- Facebook icon -->
+                    <img src="./assets/facebook.png" alt="Facebook icon" class="icon contact-icon"/>
+                    <!-- Link to Facebook -->
+                    <p><a href="https://facebook.com">Facebook</a></p>
+                </div>
+                <!-- Individual contact info container: Instagram -->
+                <div class="contact-info-container">
+                    <!-- Instagram icon -->
+                    <img src="./assets/instagram.png" alt="Instagram icon" class="icon contact-icon"/>
+                    <!-- Link to Instagram -->
+                    <p><a href="https://www.instagram.com">Instagram</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer and Credits -->
+        <footer>
+            <!-- Navigation bar section -->
+            <nav>
+                <div class="nav-links-container">
+                    <!-- Unordered list of navigation links -->
+                    <ul class="nav-links">
+                        <!-- List item for "About, Experience, Project, & Contact" sections -->
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Project</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Credit for original work to the creator -->
+            <p>Credit To: Ademir</p>
+            <!-- References to resources used -->
+            <p>References & Assets: 
+                <a href="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2" target="_blank">https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2</a>
+            </p>
+            <p>
+                <a href="https://www.youtube.com/watch?v=ldwlOzRvYOU" target="_blank">https://www.youtube.com/watch?v=ldwlOzRvYOU</a>
+            </p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
